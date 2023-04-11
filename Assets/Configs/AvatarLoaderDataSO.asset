@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948c6e1f05b4eab4eb3d15c62ae5fbdb, type: 3}
+  m_Name: AvatarLoaderDataSO
+  m_EditorClassIdentifier: 
+  avatarURL: 
+  mainMenuAConfig: {fileID: 11400000, guid: ce180c8d62e9a784dbeb5f498f5d7796, type: 2}
+  gameplayAConfig: {fileID: 11400000, guid: 84fc8013a573e3f4d98523d7227ea045, type: 2}
+  cutsceneAConfig: {fileID: 11400000, guid: fe26c5a5422a7b34c9152fa448408b2b, type: 2}
+  mainMenuSpawnPosition: {x: 0, y: 0, z: 0}
+  gameplaySpawnPosition: {x: 0, y: 0, z: 0}
