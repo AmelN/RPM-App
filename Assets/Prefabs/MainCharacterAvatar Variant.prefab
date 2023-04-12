@@ -56,7 +56,7 @@ PrefabInstance:
     - target: {fileID: 3945862188169823750, guid: 939bc9b7b0a2fb04aa2555a444247673,
         type: 3}
       propertyPath: m_Name
-      value: MainCharacterAvatar
+      value: MainCharacterAvatar Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4088727401125504214, guid: 939bc9b7b0a2fb04aa2555a444247673,
         type: 3}
@@ -179,7 +179,7 @@ MonoBehaviour:
   JumpTimeout: 0.3
   FallTimeout: 0.15
   Grounded: 1
-  GroundedOffset: -0.14
+  GroundedOffset: 0.1
   GroundedRadius: 0.28
   GroundLayers:
     serializedVersion: 2
