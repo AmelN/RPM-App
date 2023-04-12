@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3663d6a9358ae4149aad3496e56d4601, type: 3}
   m_Name: GameplayAvatarConfig
   m_EditorClassIdentifier: 
-  MeshLod: 0
+  MeshLod: 2
   Pose: 0
-  TextureAtlas: 1
+  TextureAtlas: 3
   TextureSizeLimit: 1024
   TextureChannel: 0000000001000000020000000300000004000000
   UseHands: 0

@@ -12,6 +12,13 @@ public class AvatarLoaderDataSO : ScriptableObject
     public AvatarConfig gameplay;
     public AvatarConfig cutscene;
 
-    public Vector3 mainMenuSpawnPosition;
-    public Vector3 gameplaySpawnPosition;
+    [Header("Main menu avatar transform")]
+    public Vector3 MMSpawnPosition;
+    public Vector3 MMSpawnRotation;
+    public Vector3 MMSpawnScale;
+
+    [Header("Gameplay avatar transform")]
+    public Vector3 GPSpawnPosition;
+    public Vector3 GPSpawnRotation;
+    public Vector3 GPSpawnScale;
 }
