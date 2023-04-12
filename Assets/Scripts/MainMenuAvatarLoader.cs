@@ -42,6 +42,7 @@ public class MainMenuAvatarLoader : MonoBehaviour
             if (avatarUrl != avatarLoaderDataSO.avatarURL)  avatarLoaderDataSO.avatarURL = avatarUrl;
             avatarLoadingInProgress.SetActive(true);
             if(avatar!=null) avatar.SetActive(false);
+            avatarObjectLoader.AvatarConfig = avatarLoaderDataSO.mainMenuConfig;
             avatarObjectLoader.LoadAvatar(avatarUrl);
         }
     }

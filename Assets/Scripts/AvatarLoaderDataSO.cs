@@ -8,9 +8,9 @@ public class AvatarLoaderDataSO : ScriptableObject
     public string avatarURL;
 
     [Header("Avatars Configs")]
-    public AvatarConfig mainMenu;
-    public AvatarConfig gameplay;
-    public AvatarConfig cutscene;
+    public AvatarConfig mainMenuConfig;
+    public AvatarConfig gameplayConfig;
+    public AvatarConfig cutsceneConfig;
 
     [Header("Main menu avatar transform")]
     public Vector3 MMSpawnPosition;

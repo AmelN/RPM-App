@@ -9,9 +9,13 @@ public class ChangeAvatarUI : MonoBehaviour
 
     public void LoadNewAvatar()
     {
-        if (inputUI.text != null)
+        if (!string.IsNullOrEmpty(inputUI.text))
         {
             mainMenuAvatarLoader.LoadAvatar(inputUI.text.Trim(' '));
+        }
+        else
+        {
+            Debug.LogWarning("url can't be empty!");
         }
     }
 
