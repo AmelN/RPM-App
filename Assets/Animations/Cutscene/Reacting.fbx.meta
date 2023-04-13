@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 3ac97ca4e08595b41a66b6fb4c623a5a
+guid: a998e0e147bce6248bbc9535e673b8a6
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: push
+    second: Reacting
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -20,7 +20,14 @@ ModelImporter:
     removeConstantScaleCurves: 1
     motionNodeName: 
     rigImportErrors: 
-    rigImportWarnings: 
+    rigImportWarnings: "Avatar Rig Configuration mis-match. Bone length in configuration
+      does not match position in animation file:\n\t'mixamorig:LeftUpLeg' : position
+      error = 9811.322266 mm\n\t'mixamorig:LeftLeg' : position error = 41784.769531
+      mm\n\t'mixamorig:LeftFoot' : position error = 41023.792969 mm\n\t'mixamorig:LeftToeBase'
+      : position error = 16779.841797 mm\n\t'mixamorig:RightUpLeg' : position error
+      = 9841.370117 mm\n\t'mixamorig:RightLeg' : position error = 41782.144531 mm\n\t'mixamorig:RightFoot'
+      : position error = 41002.054688 mm\n\t'mixamorig:RightToeBase' : position error
+      = 16760.380859 mm\n"
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -32,17 +39,15 @@ ModelImporter:
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
-    extraExposedTransformPaths:
-    - Armature
-    - mixamorig:Hips
+    extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: push
+      name: Reacting
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 119
+      lastFrame: 110
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -55,7 +60,7 @@ ModelImporter:
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
-      keepOriginalPositionY: 0
+      keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
       mirror: 0
@@ -1218,11 +1223,12 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 3ac97ca4e08595b41a66b6fb4c623a5a,
+    type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 2
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
