@@ -3,8 +3,9 @@ using ReadyPlayerMe.AvatarLoader;
 
 public class MainMenuAvatarLoader : MonoBehaviour
 {
-    [SerializeField] private AvatarLoaderDataSO avatarLoaderDataSO;
+    enum AvatarType {Menu, Gameplay, Cutscene};
 
+    [SerializeField] private AvatarLoaderDataSO avatarLoaderDataSO;
     private GameObject avatar;
     private AvatarObjectLoader avatarObjectLoader;
     [SerializeField]
@@ -16,7 +17,8 @@ public class MainMenuAvatarLoader : MonoBehaviour
     [SerializeField]
     [Tooltip("Preview avatar to display until avatar loads. Will be destroyed after new avatar is loaded")]
     private GameObject avatarLoadingInProgress;
-
+    [Tooltip("If menu it Will show UI indicating loading in progress as a visual feedback. Otherwise it shows a black screen while loading")]
+    [SerializeField] private AvatarType currentAvatarType;
 
     void Start()
     {
@@ -24,14 +26,8 @@ public class MainMenuAvatarLoader : MonoBehaviour
         avatarObjectLoader.OnCompleted += OnLoadCompleted;
         avatarObjectLoader.OnFailed += OnLoadFailed;
 
-        if (avatarLoadingInProgress != null)
-        {
-            avatarLoadingInProgress.SetActive(true);
-        }
-        if (loadOnStart)
-        {
-            LoadAvatar(avatarLoaderDataSO.avatarURL);
-        }
+        if (currentAvatarType == AvatarType.Menu && avatarLoadingInProgress != null) avatarLoadingInProgress.SetActive(true);
+        if (loadOnStart) LoadAvatar(avatarLoaderDataSO.avatarURL);
     }
 
     public void LoadAvatar(string avatarUrl)
@@ -40,9 +36,9 @@ public class MainMenuAvatarLoader : MonoBehaviour
         {
             //If we are loading a new avatar, we want to update the data SO so it is saved to be use for gameplay later
             if (avatarUrl != avatarLoaderDataSO.avatarURL)  avatarLoaderDataSO.avatarURL = avatarUrl;
-            avatarLoadingInProgress.SetActive(true);
+            if (currentAvatarType == AvatarType.Menu) avatarLoadingInProgress.SetActive(true);
             if(avatar!=null) avatar.SetActive(false);
-            avatarObjectLoader.AvatarConfig = avatarLoaderDataSO.mainMenuConfig;
+            avatarObjectLoader.AvatarConfig = avatarLoaderDataSO.Config;
             avatarObjectLoader.LoadAvatar(avatarUrl);
         }
     }
@@ -54,10 +50,7 @@ public class MainMenuAvatarLoader : MonoBehaviour
 
     private void OnLoadCompleted(object sender, CompletionEventArgs args)
     {
-        if (avatarLoadingInProgress != null)
-        {
-            avatarLoadingInProgress.SetActive(false);
-        }
+        if (currentAvatarType == AvatarType.Menu && avatarLoadingInProgress != null) avatarLoadingInProgress.SetActive(false);
         SetupAvatar(args.Avatar);
     }
 

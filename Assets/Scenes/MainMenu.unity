@@ -1466,6 +1466,7 @@ MonoBehaviour:
   animatorController: {fileID: 9100000, guid: 71ed8186b137cec44af55cca8270c0ba, type: 2}
   loadOnStart: 1
   avatarLoadingInProgress: {fileID: 1647257074}
+  isMenu: 1
 --- !u!1 &606629282
 GameObject:
   m_ObjectHideFlags: 0
