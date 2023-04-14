@@ -13,12 +13,7 @@ MonoBehaviour:
   m_Name: AvatarLoaderDataSO
   m_EditorClassIdentifier: 
   avatarURL: https://models.readyplayer.me/642d89fc2e896b2602446939.glb
-  mainMenuConfig: {fileID: 11400000, guid: ce180c8d62e9a784dbeb5f498f5d7796, type: 2}
-  gameplayConfig: {fileID: 11400000, guid: 84fc8013a573e3f4d98523d7227ea045, type: 2}
-  cutsceneConfig: {fileID: 11400000, guid: fe26c5a5422a7b34c9152fa448408b2b, type: 2}
-  MMSpawnPosition: {x: 61, y: 4.2, z: 2.8}
-  MMSpawnRotation: {x: 0, y: -12, z: 0}
-  MMSpawnScale: {x: 1.3, y: 1.3, z: 1.3}
-  GPSpawnPosition: {x: 0, y: 0, z: 0}
-  GPSpawnRotation: {x: 0, y: 0, z: 0}
-  GPSpawnScale: {x: 0, y: 0, z: 0}
+  Config: {fileID: 11400000, guid: ce180c8d62e9a784dbeb5f498f5d7796, type: 2}
+  SpawnPosition: {x: 61, y: 4.2, z: 2.8}
+  SpawnRotation: {x: 0, y: -12, z: 0}
+  SpawnScale: {x: 1.3, y: 1.3, z: 1.3}

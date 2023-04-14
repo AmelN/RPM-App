@@ -1,7 +1,7 @@
 using UnityEngine;
 using ReadyPlayerMe.AvatarLoader;
 
-public class MainMenuAvatarLoader : MonoBehaviour
+public class AvatarLoader : MonoBehaviour
 {
     enum AvatarType {Menu, Gameplay, Cutscene};
 
@@ -64,9 +64,9 @@ public class MainMenuAvatarLoader : MonoBehaviour
         avatar = targetAvatar;
         // Re-parent and set transforms from data scriptable object
         avatar.transform.parent = transform;
-        avatar.transform.localPosition = avatarLoaderDataSO.MMSpawnPosition;
-        avatar.transform.localRotation = Quaternion.Euler(avatarLoaderDataSO.MMSpawnRotation);
-        avatar.transform.localScale = avatarLoaderDataSO.MMSpawnScale;
+        avatar.transform.localPosition = avatarLoaderDataSO.SpawnPosition;
+        avatar.transform.localRotation = Quaternion.Euler(avatarLoaderDataSO.SpawnRotation);
+        avatar.transform.localScale = avatarLoaderDataSO.SpawnScale;
 
         if (animatorController != null)
         {

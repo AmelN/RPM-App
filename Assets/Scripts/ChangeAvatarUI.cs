@@ -5,13 +5,13 @@ public class ChangeAvatarUI : MonoBehaviour
 {
     [SerializeField] private TMP_InputField inputUI;
     [SerializeField] private GameObject mainMenuUI;
-    [SerializeField] private MainMenuAvatarLoader mainMenuAvatarLoader;
+    [SerializeField] private AvatarLoader avatarLoader;
 
     public void LoadNewAvatar()
     {
         if (!string.IsNullOrEmpty(inputUI.text))
         {
-            mainMenuAvatarLoader.LoadAvatar(inputUI.text.Trim(' '));
+            avatarLoader.LoadAvatar(inputUI.text.Trim(' '));
         }
         else
         {
