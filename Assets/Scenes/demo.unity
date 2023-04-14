@@ -612,7 +612,7 @@ GameObject:
   - component: {fileID: 77817942}
   - component: {fileID: 77817941}
   m_Layer: 0
-  m_Name: CM vcam5
+  m_Name: StandingUpVcam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1603,15 +1603,15 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 340631573}
     m_Modifications:
     - target: {fileID: 1095487145173406, guid: 3e464e7c60025bc459275454686c31ae, type: 3}
       propertyPath: m_Name
-      value: Stone_post_1
+      value: StoneToPush
       objectReference: {fileID: 0}
     - target: {fileID: 4455924419505574, guid: 3e464e7c60025bc459275454686c31ae, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4455924419505574, guid: 3e464e7c60025bc459275454686c31ae, type: 3}
       propertyPath: m_LocalScale.x
@@ -1693,6 +1693,12 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!4 &323464947 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4455924419505574, guid: 3e464e7c60025bc459275454686c31ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 323464944}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &336637573
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1740,6 +1746,40 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 336637573}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &340631572
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 340631573}
+  m_Layer: 0
+  m_Name: AnimatedObjects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &340631573
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340631572}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 323464947}
+  - {fileID: 1900390615}
+  - {fileID: 385952360}
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &364322408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6654,15 +6694,15 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 340631573}
     m_Modifications:
     - target: {fileID: 100000, guid: 59c7451ed4e8f9b4d873adf10daa7b2b, type: 3}
       propertyPath: m_Name
-      value: HitObject
+      value: HitWoodenStick
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 59c7451ed4e8f9b4d873adf10daa7b2b, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 59c7451ed4e8f9b4d873adf10daa7b2b, type: 3}
       propertyPath: m_LocalScale.x
@@ -6674,7 +6714,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 59c7451ed4e8f9b4d873adf10daa7b2b, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.2172375
+      value: 0.21723752
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 59c7451ed4e8f9b4d873adf10daa7b2b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6744,6 +6784,12 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!4 &385952360 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 59c7451ed4e8f9b4d873adf10daa7b2b,
+    type: 3}
+  m_PrefabInstance: {fileID: 385952357}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &401759684
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7179,7 +7225,7 @@ GameObject:
   - component: {fileID: 461151095}
   - component: {fileID: 461151094}
   m_Layer: 0
-  m_Name: BlackscreenVcam (1)
+  m_Name: BlackscreenPuzzleVcam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8146,7 +8192,7 @@ GameObject:
   - component: {fileID: 702463923}
   - component: {fileID: 702463922}
   m_Layer: 0
-  m_Name: BlackscreenVcam (3)
+  m_Name: BlackscreenEndingVcam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8472,7 +8518,7 @@ GameObject:
   - component: {fileID: 737860965}
   - component: {fileID: 737860964}
   m_Layer: 0
-  m_Name: CM vcam4 (1)
+  m_Name: SolvePuzzleVcam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8974,7 +9020,7 @@ GameObject:
   - component: {fileID: 861877623}
   - component: {fileID: 861877622}
   m_Layer: 0
-  m_Name: CrystalRevealCam
+  m_Name: CrystalRevealVCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14226,7 +14272,7 @@ GameObject:
   - component: {fileID: 921941481}
   - component: {fileID: 921941483}
   m_Layer: 0
-  m_Name: CM vcam4
+  m_Name: FindPuzzlevcam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19578,7 +19624,7 @@ PrefabInstance:
     - target: {fileID: 8944336655422409496, guid: f6d148d888ffbf54b9afe9936dfaec1f,
         type: 3}
       propertyPath: near clip plane
-      value: 0.001
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409496, guid: f6d148d888ffbf54b9afe9936dfaec1f,
         type: 3}
@@ -19618,22 +19664,22 @@ PrefabInstance:
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.454733
+      value: 0.4594491
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.46115825
+      value: 0.46581042
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.53511125
+      value: -0.5310666
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.54240835
+      value: 0.5384195
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f,
         type: 3}
@@ -19718,7 +19764,7 @@ GameObject:
   - component: {fileID: 1008608179}
   - component: {fileID: 1008608178}
   m_Layer: 0
-  m_Name: CrystalRevealCam (1)
+  m_Name: GetHitVCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21298,7 +21344,7 @@ Transform:
   - {fileID: 77817940}
   - {fileID: 702463921}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1331364696
 PrefabInstance:
@@ -22182,7 +22228,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491781656}
-  m_LocalRotation: {x: 0.034899175, y: 0.949092, z: -0.11353109, w: 0.29174852}
+  m_LocalRotation: {x: 0.034334928, y: 0.9505275, z: -0.11370017, w: 0.28703818}
   m_LocalPosition: {x: 9.899746, y: 13.745784, z: -1.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -22599,7 +22645,7 @@ GameObject:
   - component: {fileID: 1624153001}
   - component: {fileID: 1624153000}
   m_Layer: 0
-  m_Name: BlackscreenVcam
+  m_Name: BlackscreenIntroVcam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34538,7 +34584,7 @@ GameObject:
   - component: {fileID: 1889085461}
   - component: {fileID: 1889085460}
   m_Layer: 0
-  m_Name: BlackscreenVcam (2)
+  m_Name: BlackscreenGetHitVcam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34723,15 +34769,15 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 340631573}
     m_Modifications:
     - target: {fileID: 1932873182938870, guid: bb145e98bc64e154d9b9319e2c54a3aa, type: 3}
       propertyPath: m_Name
-      value: Stone_structure
+      value: Stone_HoldingCrystal
       objectReference: {fileID: 0}
     - target: {fileID: 4845401058067570, guid: bb145e98bc64e154d9b9319e2c54a3aa, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4845401058067570, guid: bb145e98bc64e154d9b9319e2c54a3aa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -35133,6 +35179,10 @@ PlayableDirector:
     value: {fileID: 702463920}
   - key: {fileID: -7271820855788991910, guid: 94f62a71ff45d9145ba0bffccfcae3c4, type: 2}
     value: {fileID: 702463922}
+  - key: {fileID: 2972616963763013901, guid: 94f62a71ff45d9145ba0bffccfcae3c4, type: 2}
+    value: {fileID: 1696481053}
+  - key: {fileID: 8315584605870948627, guid: 94f62a71ff45d9145ba0bffccfcae3c4, type: 2}
+    value: {fileID: 1958213215}
   m_ExposedReferences:
     m_References:
     - 7238084615dc1aa469b502382a378194: {fileID: 1121471302}
@@ -40047,6 +40097,12 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!95 &1958213215 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7699161664498009394, guid: f3a65d57c77d73b459e247a54054ee74,
+    type: 3}
+  m_PrefabInstance: {fileID: 5720546558852615080}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1974188416 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1407643467694454, guid: 124fb29879dc61540b6b3c173eeafe39,
