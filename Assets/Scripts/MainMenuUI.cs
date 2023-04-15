@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuUI : MonoBehaviour
 {
-    
+
     [SerializeField] private GameObject ChangeAvatartUI;
     public void StartGame()
     {

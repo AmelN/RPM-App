@@ -3,14 +3,14 @@ using ReadyPlayerMe.AvatarLoader;
 
 public class AvatarLoader : MonoBehaviour
 {
-    enum AvatarType {Menu, Gameplay, Cutscene};
+    enum AvatarType { Menu, Gameplay, Cutscene };
 
     [Tooltip("Scriptable object containing loader config and transform data ")]
     [SerializeField] private AvatarLoaderDataSO avatarLoaderDataSO;
     [Tooltip("Scriptable object containing the avatar url")]
     public AvatarUrlDataSO avatarUrlDataSO;
     [Tooltip("Animator to use on loaded avatar")]
-    [SerializeField]private RuntimeAnimatorController animatorController;
+    [SerializeField] private RuntimeAnimatorController animatorController;
     [Tooltip("If true it will try to load avatar on start from avatarUrl inside the avatarLoaderDataSO")]
     [SerializeField] private bool loadOnStart = true;
     [Tooltip("Preview avatar to display until avatar loads. Will be destroyed after new avatar is loaded")]
@@ -29,7 +29,7 @@ public class AvatarLoader : MonoBehaviour
         avatarObjectLoader.OnFailed += OnLoadFailed;
         if (avatarLoadingInProgress != null) avatarLoadingInProgress.SetActive(true);
         if (loadOnStart) LoadAvatar(avatarUrlDataSO.avatarURL);
-        if(gameplayAvatarTemplate != null) gameplayAvatarTemplate.SetActive(false);
+        if (gameplayAvatarTemplate != null) gameplayAvatarTemplate.SetActive(false);
     }
 
     public void LoadAvatar(string avatarUrl)
@@ -39,7 +39,7 @@ public class AvatarLoader : MonoBehaviour
             //If we are loading a new avatar, we want to update the data SO so it is saved to be used for gameplay and cutscene later
             if (avatarUrl != avatarUrlDataSO.avatarURL) avatarUrlDataSO.avatarURL = avatarUrl;
             avatarLoadingInProgress.SetActive(true);
-            if(avatar!=null) avatar.SetActive(false);
+            if (avatar != null) avatar.SetActive(false);
             avatarObjectLoader.AvatarConfig = avatarLoaderDataSO.Config;
             avatarObjectLoader.LoadAvatar(avatarUrl);
         }

@@ -41,7 +41,6 @@ public class CutsceneTrigger : MonoBehaviour
             if (playableAssetOutput.streamName == trackName)
             {
                 playableDirector.SetGenericBinding(playableAssetOutput.sourceObject, objectToBind);
-
                 break;
             }
         }
