@@ -122,12 +122,6 @@ namespace StarterAssets
             }
         }
 
-        public void SetCinemachineCameraTarget(GameObject target)
-        {
-            CinemachineCameraTarget = target;
-        }
-
-
         private void Awake()
         {
             // get a reference to our main camera
