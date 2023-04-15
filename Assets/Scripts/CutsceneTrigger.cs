@@ -5,8 +5,13 @@ public class CutsceneTrigger : MonoBehaviour
 {
     [SerializeField] private AvatarLoader avatarLoader;
     [SerializeField] private PlayableDirector playableDirector;
-
     private bool cutscenePlayed;
+
+    void OnEnable()
+    {
+        playableDirector.stopped += OnPlayableDirectorStopped;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (!cutscenePlayed && other.gameObject.GetComponent<CharacterController>() != null)
@@ -21,6 +26,12 @@ public class CutsceneTrigger : MonoBehaviour
         GetComponent<PlayableDirector>().Play();
     }
 
+    void OnPlayableDirectorStopped(PlayableDirector aDirector)
+    {
+        if (playableDirector == aDirector)
+            avatarLoader.gameObject.SetActive(false);
+    }
+
     public void BindTimeline(string trackName, Animator objectToBind)
     {
         //The "outputs" in this case are the tracks of the PlayableAsset
@@ -33,5 +44,10 @@ public class CutsceneTrigger : MonoBehaviour
                 break;
             }
         }
+    }
+
+    void OnDisable()
+    {
+        playableDirector.stopped -= OnPlayableDirectorStopped;
     }
 }
