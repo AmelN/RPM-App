@@ -1,9 +1,10 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.Playables;
 
 public class CutsceneTrigger : MonoBehaviour
 {
-    [SerializeField] private AvatarLoader avatarLoader;
+    [SerializeField] private AvatarLoader cutsceneAvatarLoader;
     [SerializeField] private PlayableDirector playableDirector;
     private bool cutscenePlayed;
 
@@ -16,7 +17,8 @@ public class CutsceneTrigger : MonoBehaviour
     {
         if (!cutscenePlayed && other.gameObject.GetComponent<CharacterController>() != null)
         {
-            avatarLoader.LoadAvatar(avatarLoader.GetComponent<AvatarLoader>().avatarUrlDataSO.avatarURL);
+            cutsceneAvatarLoader.LoadAvatar(cutsceneAvatarLoader.GetComponent<AvatarLoader>().avatarUrlDataSO.avatarURL);
+            GetComponent<BoxCollider>().enabled = false;
         }
     }
 
@@ -28,13 +30,13 @@ public class CutsceneTrigger : MonoBehaviour
 
     void OnPlayableDirectorStopped(PlayableDirector aDirector)
     {
+        // We disable the cutscene avatar when cutscene ends, so we can resume with gameplay avatar
         if (playableDirector == aDirector)
-            avatarLoader.gameObject.SetActive(false);
+            cutsceneAvatarLoader.gameObject.SetActive(false);
     }
 
     public void BindTimeline(string trackName, Animator objectToBind)
     {
-        //The "outputs" in this case are the tracks of the PlayableAsset
         foreach (var playableAssetOutput in playableDirector.playableAsset.outputs)
         {
             if (playableAssetOutput.streamName == trackName)

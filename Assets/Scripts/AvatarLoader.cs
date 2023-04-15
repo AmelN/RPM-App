@@ -27,7 +27,6 @@ public class AvatarLoader : MonoBehaviour
         avatarObjectLoader = new AvatarObjectLoader();
         avatarObjectLoader.OnCompleted += OnLoadCompleted;
         avatarObjectLoader.OnFailed += OnLoadFailed;
-
         if (avatarLoadingInProgress != null) avatarLoadingInProgress.SetActive(true);
         if (loadOnStart) LoadAvatar(avatarUrlDataSO.avatarURL);
         if(gameplayAvatarTemplate != null) gameplayAvatarTemplate.SetActive(false);
@@ -37,7 +36,7 @@ public class AvatarLoader : MonoBehaviour
     {
         if (avatarUrl != null)
         {
-            //If we are loading a new avatar, we want to update the data SO so it is saved to be use for gameplay later
+            //If we are loading a new avatar, we want to update the data SO so it is saved to be used for gameplay and cutscene later
             if (avatarUrl != avatarUrlDataSO.avatarURL) avatarUrlDataSO.avatarURL = avatarUrl;
             avatarLoadingInProgress.SetActive(true);
             if(avatar!=null) avatar.SetActive(false);
@@ -77,7 +76,7 @@ public class AvatarLoader : MonoBehaviour
             animator.runtimeAnimatorController = animatorController;
             animator.applyRootMotion = false;
         }
-        //If we are in a gameplay context, we want to add the components needed
+        //If we are in a gameplay context, we want move avatar loaded under gameplay avatar template that has the gameplay components
         else if (currentAvatarType == AvatarType.Gameplay)
         {
             //We move both Armature and Renderer_Avatar under the avatar template so we have all the componenets needed for gameplay
@@ -95,5 +94,10 @@ public class AvatarLoader : MonoBehaviour
             cutsceneTrigger.BindTimeline("CutsceneAvatarActivationTrack", avatar.GetComponent<Animator>());
             cutsceneTrigger.BindTimeline("CutsceneAvatarAnimationTrack", avatar.GetComponent<Animator>());
         }
+    }
+    void OnDisable()
+    {
+        avatarObjectLoader.OnCompleted -= OnLoadCompleted;
+        avatarObjectLoader.OnFailed -= OnLoadFailed;
     }
 }
