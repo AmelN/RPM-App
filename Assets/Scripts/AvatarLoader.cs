@@ -5,22 +5,22 @@ public class AvatarLoader : MonoBehaviour
 {
     enum AvatarType {Menu, Gameplay, Cutscene};
 
+    [Tooltip("Scriptable object containing loader config and transform data ")]
     [SerializeField] private AvatarLoaderDataSO avatarLoaderDataSO;
+    [Tooltip("Scriptable object containing the avatar url")]
+    [SerializeField] private AvatarUrlDataSO avatarUrlDataSO;
+    [Tooltip("Animator to use on loaded avatar")]
+    [SerializeField]private RuntimeAnimatorController animatorController;
+    [Tooltip("If true it will try to load avatar on start from avatarUrl inside the avatarLoaderDataSO")]
+    [SerializeField] private bool loadOnStart = true;
+    [Tooltip("Preview avatar to display until avatar loads. Will be destroyed after new avatar is loaded")]
+    [SerializeField] private GameObject avatarLoadingInProgress;
+    [Tooltip("Indicate the context of loading the avatar")]
+    [SerializeField] private AvatarType currentAvatarType;
+    [Tooltip("Only to reference in a gameplay context to get the needed gameplay componenets from the template")]
+    [SerializeField] private GameObject gameplayAvatarTemplate;
     private GameObject avatar;
     private AvatarObjectLoader avatarObjectLoader;
-    [SerializeField]
-    [Tooltip("Animator to use on loaded avatar")]
-    private RuntimeAnimatorController animatorController;
-    [SerializeField]
-    [Tooltip("If true it will try to load avatar on start from avatarUrl inside the avatarLoaderDataSO")]
-    private bool loadOnStart = true;
-    [SerializeField]
-    [Tooltip("Preview avatar to display until avatar loads. Will be destroyed after new avatar is loaded")]
-    private GameObject avatarLoadingInProgress;
-    //[Tooltip("Indicate the context of loading the avatar")]
-    [SerializeField] private AvatarType currentAvatarType;
-    //[Tooltip("Only to reference in a gameplay context to get the needed gameplay componenets from the template")]
-    [SerializeField] private GameObject gameplayAvatarTemplate;
 
     void Start()
     {
@@ -29,7 +29,7 @@ public class AvatarLoader : MonoBehaviour
         avatarObjectLoader.OnFailed += OnLoadFailed;
 
         if (avatarLoadingInProgress != null) avatarLoadingInProgress.SetActive(true);
-        if (loadOnStart) LoadAvatar(avatarLoaderDataSO.avatarURL);
+        if (loadOnStart) LoadAvatar(avatarUrlDataSO.avatarURL);
         if(gameplayAvatarTemplate != null) gameplayAvatarTemplate.SetActive(false);
     }
 
@@ -38,7 +38,7 @@ public class AvatarLoader : MonoBehaviour
         if (avatarUrl != null)
         {
             //If we are loading a new avatar, we want to update the data SO so it is saved to be use for gameplay later
-            if (avatarUrl != avatarLoaderDataSO.avatarURL)  avatarLoaderDataSO.avatarURL = avatarUrl;
+            if (avatarUrl != avatarUrlDataSO.avatarURL) avatarUrlDataSO.avatarURL = avatarUrl;
             avatarLoadingInProgress.SetActive(true);
             if(avatar!=null) avatar.SetActive(false);
             avatarObjectLoader.AvatarConfig = avatarLoaderDataSO.Config;

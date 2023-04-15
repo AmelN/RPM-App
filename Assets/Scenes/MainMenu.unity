@@ -1463,10 +1463,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   avatarLoaderDataSO: {fileID: 11400000, guid: 158ccc1080922f246a93f50fd21e981a, type: 2}
+  avatarUrlDataSO: {fileID: 11400000, guid: 66728a10458820043878ce13693b91a6, type: 2}
   animatorController: {fileID: 9100000, guid: 71ed8186b137cec44af55cca8270c0ba, type: 2}
   loadOnStart: 1
   avatarLoadingInProgress: {fileID: 1647257074}
   currentAvatarType: 0
+  gameplayAvatarTemplate: {fileID: 0}
 --- !u!1 &606629282
 GameObject:
   m_ObjectHideFlags: 0

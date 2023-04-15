@@ -7524,6 +7524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   avatarLoaderDataSO: {fileID: 11400000, guid: efa39fc50f4fa4a468331afb203bd8f1, type: 2}
+  avatarUrlDataSO: {fileID: 11400000, guid: 66728a10458820043878ce13693b91a6, type: 2}
   animatorController: {fileID: 9100000, guid: 40db3173a05ae3242b1c182a09b0a183, type: 2}
   loadOnStart: 1
   avatarLoadingInProgress: {fileID: 1292414527}
