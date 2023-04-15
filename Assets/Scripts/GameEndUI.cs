@@ -6,6 +6,5 @@ public class GameEndUI : MonoBehaviour
     public void GoBackToMainMenu()
     {
         Debug.Log("I detected press");
-        SceneManager.LoadScene("MainMenu");
     }
 }
