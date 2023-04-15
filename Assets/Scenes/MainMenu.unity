@@ -1063,7 +1063,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputUI: {fileID: 112672121}
   mainMenuUI: {fileID: 819263123}
-  mainMenuAvatarLoader: {fileID: 592526831}
+  avatarLoader: {fileID: 592526831}
 --- !u!1001 &299779044
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1466,7 +1466,7 @@ MonoBehaviour:
   animatorController: {fileID: 9100000, guid: 71ed8186b137cec44af55cca8270c0ba, type: 2}
   loadOnStart: 1
   avatarLoadingInProgress: {fileID: 1647257074}
-  isMenu: 1
+  currentAvatarType: 0
 --- !u!1 &606629282
 GameObject:
   m_ObjectHideFlags: 0
@@ -3710,7 +3710,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1647257075
 RectTransform:
   m_ObjectHideFlags: 0

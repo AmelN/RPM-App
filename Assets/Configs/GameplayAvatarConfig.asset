@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MeshLod: 2
   Pose: 0
-  TextureAtlas: 3
+  TextureAtlas: 1
   TextureSizeLimit: 1024
   TextureChannel: 0000000001000000020000000300000004000000
   UseHands: 0

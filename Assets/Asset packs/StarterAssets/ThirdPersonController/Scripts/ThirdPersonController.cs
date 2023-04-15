@@ -122,6 +122,11 @@ namespace StarterAssets
             }
         }
 
+        public void SetCinemachineCameraTarget(GameObject target)
+        {
+            CinemachineCameraTarget = target;
+        }
+
 
         private void Awake()
         {
@@ -137,7 +142,9 @@ namespace StarterAssets
             _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
             
             _hasAnimator = TryGetComponent(out _animator);
-            _controller = GetComponent<CharacterController>();
+            //Added in case we are using RPM avatar template
+            if (GetComponent<CharacterController>() != null) _controller = GetComponent<CharacterController>();
+            else _controller = GetComponentInParent<CharacterController>();
             _input = GetComponent<StarterAssetsInputs>();
 #if ENABLE_INPUT_SYSTEM 
             _playerInput = GetComponent<PlayerInput>();

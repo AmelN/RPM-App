@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 948c6e1f05b4eab4eb3d15c62ae5fbdb, type: 3}
-  m_Name: AvatarLoaderDataSO
+  m_Name: MM_AvatarLoaderDataSO
   m_EditorClassIdentifier: 
   avatarURL: https://models.readyplayer.me/642d89fc2e896b2602446939.glb
   Config: {fileID: 11400000, guid: ce180c8d62e9a784dbeb5f498f5d7796, type: 2}
