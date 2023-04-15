@@ -8,7 +8,7 @@ public class AvatarLoader : MonoBehaviour
     [Tooltip("Scriptable object containing loader config and transform data ")]
     [SerializeField] private AvatarLoaderDataSO avatarLoaderDataSO;
     [Tooltip("Scriptable object containing the avatar url")]
-    [SerializeField] private AvatarUrlDataSO avatarUrlDataSO;
+    public AvatarUrlDataSO avatarUrlDataSO;
     [Tooltip("Animator to use on loaded avatar")]
     [SerializeField]private RuntimeAnimatorController animatorController;
     [Tooltip("If true it will try to load avatar on start from avatarUrl inside the avatarLoaderDataSO")]
@@ -77,9 +77,8 @@ public class AvatarLoader : MonoBehaviour
             animator.runtimeAnimatorController = animatorController;
             animator.applyRootMotion = false;
         }
-
         //If we are in a gameplay context, we want to add the components needed
-        if (currentAvatarType == AvatarType.Gameplay)
+        else if (currentAvatarType == AvatarType.Gameplay)
         {
             //We move both Armature and Renderer_Avatar under the avatar template so we have all the componenets needed for gameplay
             avatar.transform.GetChild(1).parent = gameplayAvatarTemplate.transform;
@@ -87,6 +86,14 @@ public class AvatarLoader : MonoBehaviour
             gameplayAvatarTemplate.SetActive(true);
             //We remove the parent of loaded avatar as we don't need it after moving Armature and Renderer_Avatar under gameplay avatar
             Destroy(transform.GetChild(0).gameObject);
+        }
+        //If we are in a gameplay context, we want to play the cutscene
+        else if (currentAvatarType == AvatarType.Cutscene)
+        {
+            CutsceneTrigger cutsceneTrigger = GameObject.FindWithTag("CutsceneTrigger").GetComponent<CutsceneTrigger>();
+            cutsceneTrigger.PlayCutscene();
+            cutsceneTrigger.BindTimeline("CutsceneAvatarActivationTrack", avatar.GetComponent<Animator>());
+            cutsceneTrigger.BindTimeline("CutsceneAvatarAnimationTrack", avatar.GetComponent<Animator>());
         }
     }
 }
