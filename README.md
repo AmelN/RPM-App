@@ -13,8 +13,8 @@ The sample demo can be played with any Ready Player Me avatar, as the loading is
 
 ### Tools used
 I used Unity game engine, latest LTS version 2021.3.23f1. The project uses the Universal Render Pipeline (URP). Below are the major packages used: <br />
-Ready Player me packages <br />
-Various Unity packages including URP, Cinemachine, Timeline, TextMeshPro, Input System.
+- Ready Player me packages <br />
+- Various Unity packages including URP, Cinemachine, Timeline, TextMeshPro, Input System.
 
 ### Assets used
 I used these free assets from the Unity Asset Store: <br />
@@ -48,9 +48,3 @@ After a few seconds in the gameplay scene by going through the cave, the player 
 
 5. ##### Cross scenes/contexts avatar
 A key feature on this demo is the fact that the avatar loading is done at runtime. Meaning that I offer the users the ability to change the avatar in the main menu and that avatar will be used throughout the game parts (Main menu, gameplay and cutscene). I made a loader script that will take care of making sure the game runs smoothly in different game contexts, using an enum to specify the context of the loader.
-
-### If I had more time
-- Add voice over, so we have more context of what’s happening during the cutscene, and that way I can also showcase facial animations on an RPM avatar.
-- Add an Animator Controller per gender, because for now no matter the avatar loaded, I use the same AC which focuses on a female character as I am using that as an example in this demo. So I can later add these same animations for male avatars, and that way I reference the right AC depending on the gender of the avatar requested to be loaded.
-- Add post-processing, especially for the cutscene during some specific camera shots.
-- Add custom editor for avatar loader script, so we can for example show different properties depending on a specific enum value etc…
