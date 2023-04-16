@@ -1,4 +1,4 @@
-### Context - why and what is it?
+### Context - what is it and why?
 In this demo, I showcase how I integrated a Ready Player Me avatar in a small game sample I made, with a focus on a cutscene. The reason behind this focus is that in cutscenes and mostly in third-person games, we tend to see the main character showcased as a hero. So, I wanted to show you as a developer a way to offer gamers a unique experience by allowing them to see themselves as heroes  through their unique customized avatar.
 
 ### The game example
