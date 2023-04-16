@@ -7,7 +7,7 @@ public class MainMenuUI : MonoBehaviour
     [SerializeField] private GameObject ChangeAvatartUI;
     public void StartGame()
     {
-        SceneManager.LoadScene("demo");
+        SceneManager.LoadScene("Level");
     }
 
     public void ShowOptions()
