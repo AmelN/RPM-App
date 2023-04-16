@@ -3,7 +3,7 @@ In this demo, I showcase how I integrated a Ready Player Me avatar in a small ga
 
 ### The game example
 Since the game sample is focused on the cutscene, and because of time constraint, I couldn't record voice over for the cinematic sequence. I wanted to give a quick overview of what the game is about. <br />
-It is an adventure game where the main character is an archeologist looking for a specific crystal known for its power to give the ability to travel through time.
+It is an adventure game where the main character is an archeologist looking for a specific crystal known for its power to give the ability to travel through time. <br />
 When we start the game, we are in a cave where we need to look for the way out and once we are outside, we see ruins. As soon as the character gets close to those ruins, gameplay is interrupted and the cutscene starts playing. <br />
 During the cinematic, we see the character solving a puzzle to reveal the crystal. Shortly after we see the character getting hit by an unknown enemy and losing consciousness. Later during the sequence we see them waking up but the crystal has disappeared. The gameplay resumes and the goal is to find these enemies and get the crystal. <br />
 For this demo, I didn't include more gameplay after the cutscene. The player needs to find the second cave entrance, and as soon as we enter it, we are sent back to the main menu. <br />
